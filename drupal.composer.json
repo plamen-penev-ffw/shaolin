@@ -1,0 +1,57 @@
+{
+    "name": "custom-project/drupal-vm",
+    "description": "",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/7"
+        }
+    ],
+
+
+
+    "require": {
+        "composer/installers": "^1.0.20",
+        "drupal-composer/drupal-scaffold": "^2.0.1",
+ 	"drupal-composer/preserve-paths": "0.1.*",
+	"drupal/drupal": "7.*",
+        "drupal/devel": "^1.5"
+ 
+    },
+    
+  
+    "extra": {
+        "installer-paths": {
+            "docroot/core": ["type:drupal-core"],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+
+        },
+
+"preserve-paths": [
+      "docroot/sites/all/modules/contrib",
+      "docroot/sites/all/themes/contrib",
+      "docroot/sites/all/libraries",
+      "docroot/sites/all/drush",
+      "docroot/sites/default/settings.php",
+      "docroot/sites/default/files"
+    ]
+},
+
+
+    "config": {
+        "process-timeout": 1200
+    }
+}
+
+ 
