@@ -1,5 +1,5 @@
 FROM geerlingguy/docker-debian9-ansible:latest
-LABEL maintainer="Jeff Geerling"
+LABEL maintainer="Jeff Geerlingg"
 
 # Copy provisioning directory, variable overrides, and scripts into container.
 COPY ./ /etc/ansible/drupal-vm
